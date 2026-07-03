@@ -1,0 +1,18 @@
+{
+  "HOME": {
+    "TITLE": "Internacionalización con Ionic",
+    "SUBTITLE": "Cambio dinámico de idioma",
+    "DESCRIPTION": "Esta aplicación demuestra cómo implementar múltiples idiomas usando Ionic, Angular Standalone y ngx-translate.",
+    "LANGUAGE_LABEL": "Idioma",
+    "ACTIVE_LANGUAGE": "Idioma actual: Español",
+    "BUTTONS": {
+      "START": "Iniciar",
+      "INFO": "Información",
+      "SETTINGS": "Configuración"
+    }
+  },
+  "LANGUAGES": {
+    "ES": "Español",
+    "EN": "Inglés"
+  }
+}

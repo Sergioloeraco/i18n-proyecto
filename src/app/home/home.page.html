@@ -1,20 +1,48 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>{{ 'HOME.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label>{{ 'HOME.LANGUAGE_LABEL' | translate }}</ion-label>
+
+    <ion-select
+      [value]="currentLang"
+      interface="popover"
+      (ionChange)="changeLanguage($event.detail.value)"
+    >
+      @for (lang of languages; track lang.code) {
+        <ion-select-option [value]="lang.code">
+          {{ lang.labelKey | translate }}
+        </ion-select-option>
+      }
+    </ion-select>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ 'HOME.TITLE' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{ 'HOME.SUBTITLE' | translate }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{ 'HOME.DESCRIPTION' | translate }}</p>
+
+      @if (currentLang === 'es') {
+        <ion-note>{{ 'HOME.ACTIVE_LANGUAGE' | translate }}</ion-note>
+      } @else {
+        <ion-note>{{ 'HOME.ACTIVE_LANGUAGE' | translate }}</ion-note>
+      }
+
+      @for (button of buttons; track button.id) {
+        <ion-button expand="block">
+          {{ button.labelKey | translate }}
+        </ion-button>
+      }
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
