@@ -44,14 +44,17 @@ La aplicacion permite cambiar dinamicamente entre espanol e ingles usando un `io
 
 El idioma seleccionado se guarda en `localStorage` y tambien actualiza el atributo `lang` del documento.
 
-## Subir a GitHub
+## Repositorio
 
-Desde la raiz del proyecto:
+Este proyecto se encuentra disponible en GitHub como entregable de la práctica de laboratorio.
 
-```bash
-git add .
-git commit -m "Implement i18n with Ionic Angular Standalone"
-git branch -M main
-git remote add origin URL_DE_TU_REPOSITORIO
-git push -u origin main
+## Validaciones técnicas
+
+- Uso de Angular Standalone Components.
+- Uso de @ngx-translate/core.
+- Carga de traducciones desde archivos JSON.
+- Cambio dinámico de idioma con ion-select.
+- Uso de @for y @if.
+- Sin uso de IonicModule.
+- Sin uso de *ngIf ni *ngFor.
 ```
